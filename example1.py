@@ -16,6 +16,6 @@ async def on_message(message):
     if message.author.bot:
         return None
     if message.content == "고마워":
-        await app.send_message(message.channel, "JJH봇을 써주셔서 고마워여!!!")
+        await message.channel.send("JJH봇을 써주셔서 고마워여!!!")
 
 app.run("token")
