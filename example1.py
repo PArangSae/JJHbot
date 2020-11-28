@@ -22,14 +22,7 @@ async def on_message(message):
         if message.content == "jjh 고마워":
             await message.channel.send("제이봇을 써주셔서 고마워여!!!")
         if message.content=="jjh help" or message.content.startswith("jjh 도움말"):
-            embed = discord.Embed(title = "명령어", description = "**명령어 목록!**", color=0xd1173b)
-            embed2 = discord.Embed(title = "jjh 청소 n", description = "적은 수 만큼 채팅을 삭제 할 수 있어여![메시지 관리권한 이상만 가능해여!]", color=0xd1173b)
-            await message.channel.send(embed=embed)
-            await message.channel.send(embed=embed2)
-            embed = discord.Embed(title = "jjh 아재개그", description = "아재개그를 내뱉어여! 아핳하하ㅏㅎ", color=0xd1173b)
-            embed2 = discord.Embed(title = "jjh 애교", description = "애교를 부려여! 뿌잉!", color=0xd1173b)
-            await message.channel.send(embed=embed)
-            await message.channel.send(embed=embed2)
+            embed = discord.Embed(title = "명령어", description = "**명령어 목록!**\n`jjh 청소 n` - 적은 수 만큼 채팅을 삭제 할 수 있어여![메시지 관리권한 이상만 가능해여!]\n`jjh 아재개그` - 아재개그를 내뱉어여! 아핳하하ㅏㅎ\n`jjh 애교` - 애교를 부려여! 뿌잉!\n", color=0xd1173b)
         if message.content.startswith("jjh 청소 "):
             if message.author.guild_permissions.manage_messages:
                 try:
